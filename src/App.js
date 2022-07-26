@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import Profile from './profile/profile'
 import './App.css';
+import photo from './photo.jpeg';
 
 function App() {
+
+  function  HandleName(prop) {
+
+  return alert(`this is ${prop} profile`)
+
+  }
+
+
+  
   return (
+
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <Profile 
+
+       data = {HandleName}
+
+      FullName = 'Mostafa' 
+
+      bio = '27 years and i love progrmaing' 
+
+     profession = 'Full stack web developer MERN'
+    >
+  
+<img style={{width: 300  , height:300 }} src = {photo} alt="preson" />
+
+     </Profile>
+
+   
+    
+  
+
+
     </div>
   );
 }
